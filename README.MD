@@ -6,7 +6,7 @@ $CentralizedManagementSubscriptionId = #"<replace me>"
 $LogAnalyticsWorkspace = #"<replace me>"
 $ResourceGroupName = #"<replace me>"
 
-Connect-AzAccount -Tenant 09745637-99c4-4b99-a199-6d39639e49fa
+Connect-AzAccount -Tenant $AADTenantID
 Select-AzSubscription -SubscriptionName $CentralizedManagementSubscriptionId
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-sub-diag" `
